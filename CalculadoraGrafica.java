@@ -45,7 +45,7 @@ public class CalculadoraGrafica extends JFrame {
         txtRes = new JLabel("0");
         txtRes.setFont(fuente);
 
-        // ✅ Lambda para suma
+        // Lambda para suma
         btnSum.addActionListener(e -> {
             double num1 = Double.parseDouble(n1.getText());
             double num2 = Double.parseDouble(n2.getText());
@@ -54,7 +54,7 @@ public class CalculadoraGrafica extends JFrame {
             txtRes.setText(String.valueOf(cc.sumar(num1, num2)));
         });
 
-        // ✅ Lambda para multiplicación
+        // Lambda para multiplicación
         btnMul.addActionListener(e -> {
             double num1 = Double.parseDouble(n1.getText());
             double num2 = Double.parseDouble(n2.getText());
@@ -62,7 +62,6 @@ public class CalculadoraGrafica extends JFrame {
             txtRes.setText(String.valueOf(Calculadora.multiplicar(num1, num2)));
         });
 
-        // Ya estaban correctos
         btnRes.addActionListener(e -> calcular("-"));
         btnDiv.addActionListener(e -> calcular("/"));
 
