@@ -10,7 +10,7 @@ public class Fred20 extends JFrame {
     int[] secuencia = new int[6];
     Random r = new Random();
 
-    // Colores asignados a cada botón
+    // Colores asignados a cada boton
     Color[] colores = { Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW };
 
     public Fred20() {
@@ -20,7 +20,7 @@ public class Fred20 extends JFrame {
         setLayout(new GridLayout(2, 2));
 
         for (int i = 0; i < casillas.length; i++) {
-            int index = i; // necesario para lambda
+            int index = i;
 
             casillas[i] = new JButton();
             casillas[i].setBackground(Color.LIGHT_GRAY);
@@ -64,7 +64,7 @@ public class Fred20 extends JFrame {
         hilo.start();
     }
 
-    // Método reutilizable para encender cualquier botón
+    // Metodo reutilizable para encender cualquier boton
     public void encenderBoton(int index) {
 
         new Thread(() -> {
