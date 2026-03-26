@@ -54,7 +54,7 @@ public class Fred20 extends JFrame {
                 encenderBoton(indice);
 
                 try {
-                    Thread.sleep(800);
+                    Thread.sleep(800);// Modificar tiempos de patron
                 } catch (Exception e) {
                 }
             }
@@ -70,7 +70,7 @@ public class Fred20 extends JFrame {
         new Thread(() -> {
             try {
                 casillas[index].setBackground(colores[index]);
-                Thread.sleep(600);
+                Thread.sleep(600);// Modificar tiempos de patron
                 casillas[index].setBackground(Color.LIGHT_GRAY);
             } catch (Exception e) {
             }
