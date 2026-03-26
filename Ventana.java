@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Ventana extends JFrame implements ActionListener {
+
     int ancho, alto;
     JTextField txtEdad;
     JButton btnAceptar;
@@ -18,14 +19,14 @@ public class Ventana extends JFrame implements ActionListener {
 
         setTitle("Validar Edad");
         setSize(ancho, alto);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // cerrar el programa
 
         panelBotones = new JPanel();
 
         txtEdad = new JTextField(10);
         btnAceptar = new JButton("Validar edad");
 
-        btnAceptar.addActionListener(this);
+        btnAceptar.addActionListener(this); // cuando se da click al botón
 
         panelBotones.add(txtEdad);
         panelBotones.add(btnAceptar);
@@ -35,29 +36,22 @@ public class Ventana extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         Ventana v = new Ventana();
-        v.setVisible(true);
+        v.setVisible(true); // mostrar la ventana
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         try {
-            // 1. Obtener texto
-            String edadTexto = txtEdad.getText();
+            int edad = Integer.parseInt(txtEdad.getText()); // leer la edad
 
-            // 2. Convertir a número
-            int edad = Integer.parseInt(edadTexto);
-
-            // 3. Validar edad
             if (edad >= 18) {
-                JOptionPane.showMessageDialog(this, "Eres mayor de edad");
+                JOptionPane.showMessageDialog(this, "Tienes " + edad + " años. Eres mayor de edad.");
             } else {
-                JOptionPane.showMessageDialog(this, "Eres menor de edad");
+                JOptionPane.showMessageDialog(this, "Tienes " + edad + " años. Eres menor de edad.");
             }
 
         } catch (NumberFormatException ex) {
-            // 4. Manejo de error (input inválido)
-            JOptionPane.showMessageDialog(this, "Por favor ingresa un número válido");
+            JOptionPane.showMessageDialog(this, "Ingresa un número válido"); // si escribe algo incorrecto
         }
     }
-}   
+}
