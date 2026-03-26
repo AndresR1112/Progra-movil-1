@@ -51,7 +51,7 @@ public class Ventana extends JFrame implements ActionListener {
             }
 
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Ingresa un número válido"); // si escribe algo incorrecto
+            JOptionPane.showMessageDialog(this, "Ingresa un número valido"); // si escribe algo incorrecto
         }
     }
 }
