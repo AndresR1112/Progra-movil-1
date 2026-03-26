@@ -54,7 +54,7 @@ public class CalculadoraGrafica extends JFrame {
             txtRes.setText(String.valueOf(cc.sumar(num1, num2)));
         });
 
-        // Lambda para multiplicación
+        // Lambda para multiplicacion
         btnMul.addActionListener(e -> {
             double num1 = Double.parseDouble(n1.getText());
             double num2 = Double.parseDouble(n2.getText());
